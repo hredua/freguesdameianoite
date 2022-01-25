@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'percolator-expert' ;
-    src: url(./assets/fonts/percolator-expert.ttf);
+    src: url(../fonts/percolator-expert.ttf);
 }
 
 * {
@@ -21,7 +21,7 @@ body {
     align-items: center;
     font-family: 'percolator-expert', sans-serif;
     background-color: black;
-    background-image: url(./assets/images/bar_coterie.jpg);
+    background-image: url(../images/bar_coterie.jpg);
     background-position: right 0 top 30%;
     background-size: 35%;
     background-repeat: no-repeat;
@@ -116,7 +116,7 @@ body {
     flex-wrap: wrap;
     gap: 30px;
     height: 90vh;
-    background-image: url(./assets/images/protests_smoke.jpg);
+    background-image: url(../images/protests_smoke.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -231,42 +231,42 @@ body {
 }
 
 .slide1 {
-    background-image: url(./assets/images/madame.jpg);
+    background-image: url(../images/madame.jpg);
 }
 .slide2 {
-    background-image: url(./assets/images/arouche.jpg);
+    background-image: url(../images/arouche.jpg);
 }
 .slide3 {
-    background-image: url(./assets/images/sé.webp);
+    background-image: url(../images/sé.webp);
 }
 .slide4 {
-    background-image: url(./assets/images/itaquerao.webp);
+    background-image: url(../images/itaquerao.webp);
 }
 .slide5 {
-    background-image: url(./assets/images/mansao-rota.jpeg);
+    background-image: url(../images/mansao-rota.jpeg);
 }
 .slide6 {
-    background-image: url(./assets/images/best-sao-bernardo.jpg);
+    background-image: url(../images/best-sao-bernardo.jpg);
 }
 .slide7 {
-    background-image: url(./assets/images/usp.jpg);
+    background-image: url(../images/usp.jpg);
 }
 .slide8 {
-    background-image: url(./assets/images/Museu-Ipiranga.jpg);
+    background-image: url(../images/Museu-Ipiranga.jpg);
 }
 .slide9 {
-    background-image: url(./assets/images/masp.jpg);
+    background-image: url(../images/masp.jpg);
 }
 .slide10 {
-    background-image: url(./assets/images/copan.jpg);
+    background-image: url(..s/images/copan.jpg);
 }
 
 .slide-2 {
-    background-image: url(./assets/images/MunicipalVista.jpg);
+    background-image: url(../images/MunicipalVista.jpg);
 }
 
 .personagens {
-    background-image: url(./assets/images/bikers.jpg);
+    background-image: url(../images/bikers.jpg);
 }
 
 .personagens-text {
