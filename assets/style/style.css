@@ -1,0 +1,777 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'percolator-expert' ;
+    src: url(/assets/fonts/percolator-expert.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    letter-spacing: 1.5px;
+}
+
+body {
+    background-color: black;
+}
+/*Menu*/
+.header {
+    display: flex;
+    align-items: center;
+    font-family: 'percolator-expert', sans-serif;
+    background-color: black;
+    background-image: url(/assets/images/bar_coterie.jpg);
+    background-position: right 0 top 30%;
+    background-size: 35%;
+    background-repeat: no-repeat;
+    height: 10vh;
+    box-shadow: 1px 1px solid rgba(0, 0, 0, 0.247);
+}
+
+#pic-header {
+    height: 4rem;
+    margin-left: 3vw;
+}
+
+.nav-index ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    margin-left: 3vw;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+
+.nav-index a {
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgb(0, 0, 0);
+    transition: ease-out 0.2s;
+    padding: 40px 0;
+}
+
+.nav-index a:hover {
+    color: #BB0000;
+    font-size: 1.7rem;
+    text-shadow: none;
+}
+
+.nav-index ul a.active {
+    color: #BB0000;
+}
+
+/*Menu Mobile*/
+
+.wrap-menu {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    z-index: 2001;
+    transform: translateX(-100%);
+    transition: transform 400ms linear;
+}
+
+.wrap-menu_open {
+    transform: translateX(0);
+}
+
+.menu {
+    overflow-x: hidden;
+    background-color: black;
+    height: 90vh;
+}
+
+.menu li{
+    list-style: none;
+    padding: 20px;
+    border-bottom: 1px solid rgba(187, 0, 0, 0.3);
+}
+
+.menu a{
+    text-decoration: none;
+    color: #BB0000;
+    font-family: 'percolator-expert', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.menu-pic {
+    display: none;
+    width: 24px;
+    margin-left: 5vw;
+}
+
+.btnMenu_close {
+    margin-left: 5vw;
+    width: 24px;
+}
+
+.cidade {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    height: 90vh;
+    background-image: url(/assets/images/protests_smoke.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: darken;
+    background-attachment: fixed;
+}
+
+.cidade-info {
+    display: flex;
+    flex-direction: column;
+    font-family: 'percolator-expert', sans-serif;
+}
+
+.cidade-info h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    font-size: 4rem;
+    text-shadow: 2px 3px 2px rgba(114, 113, 113, 0.38);
+    letter-spacing: 2px;
+}
+
+.cidade-info p {
+    padding: 3px;
+    color: #BB0000;
+    font-size: 1.9rem;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.932);
+    text-align: justify;
+    position: relative;
+    opacity: 0;
+    animation: fadeInText 0s 1.1s both;
+}
+
+.text-block {
+    position: relative;
+    overflow: hidden;
+}
+
+.text-block:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #800101;
+    transform: translateX(-100%);
+    animation: enlargeBlock .5s .6s both, revealBlock .5s 1.1s both;
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes enlargeBlock {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes revealBlock {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translate(100%);
+    }
+}
+
+.video {
+    max-width: 560px;
+    min-width: 360px;
+    flex: 1;
+}
+
+.video div {
+    display: flex;
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%;
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#slider, .locais, .slide-content {
+    width: 100%;
+    overflow-y: hidden;
+    margin: auto;
+}
+
+.locais {
+    position: relative;
+}
+
+.slide, .personagens {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 90vh;
+}
+
+.slide1 {
+    background-image: url(/assets/images/madame.jpg);
+}
+.slide2 {
+    background-image: url(/assets/images/arouche.jpg);
+}
+.slide3 {
+    background-image: url(/assets/images/sé.webp);
+}
+.slide4 {
+    background-image: url(/assets/images/itaquerao.webp);
+}
+.slide5 {
+    background-image: url(/assets/images/mansao-rota.jpeg);
+}
+.slide6 {
+    background-image: url(/assets/images/best-sao-bernardo.jpg);
+}
+.slide7 {
+    background-image: url(/assets/images/usp.jpg);
+}
+.slide8 {
+    background-image: url(/assets/images/Museu-Ipiranga.jpg);
+}
+.slide9 {
+    background-image: url(/assets/images/masp.jpg);
+}
+.slide10 {
+    background-image: url(/assets/images/copan.jpg);
+}
+
+.slide-2 {
+    background-image: url(/assets/images/MunicipalVista.jpg);
+}
+
+.personagens {
+    background-image: url(/assets/images/bikers.jpg);
+}
+
+.personagens-text {
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 2rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(228, 226, 226);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.personagens-text h1, h2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.personagens-text h1{
+    margin: 2rem;
+    font-size: 2rem;
+}
+.personagens-text h2{
+    margin-top: 3rem;
+    font-size: 1.4rem;
+}
+
+.personagens-text p {
+    margin: 1.2rem 1.2rem .4rem 1.2rem;
+    font-size: 1rem;   
+    line-height: 1.7rem;
+    text-align: justify;
+}
+
+.personagens-text ul {
+    margin-left: 3rem;
+    line-height: 1.7rem;
+}
+
+.span {
+    display: flex;
+    justify-content: space-between;
+}
+
+.span h1 {
+    margin: 5% 0 0 4%;
+    color: #fff;
+    font-size: 4vw;
+    font-family: 'percolator-expert', sans-serif;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.932);
+}
+
+.span p {
+    max-width: 600px;
+    margin: 10% 5% 0 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.548);
+    border-radius: 10px;
+    color: #fff;
+    font-family: 'percolator-expert', sans-serif;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.932);
+    font-size: 1.6vw;
+    text-align: justify;
+}
+
+.span_person {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 50vh;
+}
+.img-1 img{
+    max-width: 250px;
+    max-height: 250px;
+}
+
+.slide-person h1 {
+    color: #BB0000;
+    font-size: 4vw;
+    font-family: 'percolator-expert', sans-serif;
+    text-align: center;
+    margin-top: 5%;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.932);
+}
+
+.span_person p {
+    color: #fff;
+    font-family: 'percolator-expert', sans-serif;
+    text-shadow: 2px 3px 2px rgba(0, 0, 0, 0.932);
+    font-size: 1.6vw;
+    text-align: justify;
+    max-width: 60vw;
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -35px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+#arrow-left {
+    border-width: 30px 40px 30px 0;
+    border-color: transparent #fff transparent transparent;
+    left: 0;
+    margin-left: 15px;
+}
+#arrow-right {
+    border-width: 30px 0 30px 40px;
+    border-color: transparent transparent transparent #fff;
+    right: 0;
+    margin-right: 15px;
+}
+
+/*Pop-up warning*/
+#overlay {
+	display: flex;
+	position: absolute;
+    align-items: center;
+    justify-content: center;
+	top: 0%;
+	left: 0%;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	z-index:1001;
+	-moz-opacity: 1;
+	opacity: .96;
+	filter: alpha(opacity=90);
+}
+
+#overlay-content {
+    background-color: white;
+    max-width: 600px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 20px;
+    border-radius: 15px;
+}
+#overlay-content h1 {
+    font-family: 'percolator-expert', sans-serif;
+    color: #BB0000;
+    text-align: center;
+    font-size: 3rem;
+}
+
+#overlay-content p {
+    margin-top: 1.5rem;
+    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.button {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.button input {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    background-color: #BB0000;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+}
+
+#direitos {
+    margin: 3rem 0 1rem 0;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.form-content {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+.form {
+    background-color: #800101;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 599px) {
+    .header {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 17vw;
+    }
+
+    #pic-header {
+        height: 3rem;
+    }
+
+    .menu-pic {
+        display: block;
+    }
+
+    .cidade {
+        flex-direction: column;
+    }
+
+    .cidade-info h1 {
+        font-size: 1.7rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .cidade-info p {
+        font-size: .9rem;
+        text-align: center;
+        padding: 5px;
+        width: 340px;
+        margin: auto;
+        animation: none;
+        opacity: 1;
+    }
+
+    .text-block:after {
+        animation: none;
+    }
+
+    iframe {
+        width: 320px;
+    }
+
+    .nav-index {
+        display: none;
+    }
+
+    .wrap-menu {
+        display: block;
+    }
+
+    .span {
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3rem;
+    }
+
+    .span h1 {
+        margin: auto;
+        margin-top: 1.8rem;
+        color: #fff;
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    .span p {   
+        margin: auto;
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+
+    .span_person {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 82vh;
+        gap: 1rem;
+    }
+
+    .span_person p {
+        max-width: 85vw;
+        font-size: 1.12rem;
+        margin-top: 0;
+    }
+
+    .img-1 {
+        margin-top: 20px;
+    }
+
+    .img-1 img {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .slide-person h1{
+        font-size: 1.8rem;
+    }
+
+    #arrow-left {
+        border-width: 10px 13px 10px 0;
+        border-color: transparent rgba(255, 255, 255, 0.514) transparent transparent;
+        margin-left: 3px;
+    }
+    
+    #arrow-right {
+        border-width: 10px 0 10px 13px;
+        border-color: transparent transparent transparent rgba(255, 255, 255, 0.514);
+        margin-right: 3px;
+    }
+
+    #overlay-content {
+        width: 340px;
+    }
+
+    #overlay-content h1 {
+        font-size: 2rem;
+    }
+    
+    #overlay-content p {
+        text-align: justify;
+        font-size: .7rem;
+        line-height: .8rem;
+    }
+
+    .button input {
+        font-size: .45rem;
+    }
+
+    #direitos {
+        font-size: .7rem;
+    }
+
+    .personagens-text {
+        margin: 2rem .5rem;
+        padding: 1px;
+    }
+
+    .personagens-text h1 {
+        font-size: 1.4rem;
+    }
+    .personagens-text h2 {
+        font-size: 1.2rem;
+    }
+    .personagens-text li {
+        font-size: .8rem;
+    }
+    .personagens-text p {
+        font-size: .8rem;
+    }
+
+    .form-content {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .form {
+        font-size: .5rem;
+    }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+    .header {
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 24vw;
+    }
+
+    #pic-header {
+        height: 5rem;
+    }
+
+    .menu-pic {
+        display: block;
+    }
+
+    .cidade {
+        flex-direction: column;
+    }
+
+    .cidade-info h1 {
+        margin-top: 2rem;
+        font-size: 4rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .cidade-info p {
+        font-size: 1.5rem;
+        text-align: center;
+        padding: 10px;
+        margin: auto;
+    }
+
+    .video {
+        margin-top: 7rem;
+        width: 560px;
+    }
+
+    .nav-index {
+        display: none;
+    }
+
+    .wrap-menu {
+        display: block;
+    }
+
+    .span {
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 9rem;
+    }
+
+    .span h1 {
+        margin: auto;
+        margin-top: 60px;
+        color: #fff;
+        font-size: 4rem;
+        text-align: center;
+    }
+
+    .span p {   
+        margin: auto;
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+
+    .span_person {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 82vh;
+    }
+
+    .span_person p {
+        max-width: 85vw;
+        font-size: 2rem;
+        margin-top: 0;
+    }
+
+    .img-1 {
+        margin-top: 2rem;
+    }
+    
+    .slide-person h1{
+        font-size: 4rem;
+    }
+
+    #arrow-left {
+        border-width: 20px 30px 20px 0;
+        border-color: transparent rgb(255, 255, 255) transparent transparent;
+        margin-left: 3px;
+    }
+    
+    #arrow-right {
+        border-width: 20px 0 20px 30px;
+        border-color: transparent transparent transparent rgb(255, 255, 255);
+        margin-right: 3px;
+    }
+
+    #overlay-content {
+        width: 640px;
+    }
+
+    #overlay-content h1 {
+        font-size: 3rem;
+    }
+    
+    #overlay-content p {
+        text-align: justify;
+        font-size: 1.4rem;
+        line-height: 2rem;
+    }
+
+    .button input {
+        font-size: 1rem;
+    }
+
+    #direitos {
+        font-size: .7rem;
+    }
+
+    .personagens-text {
+        margin: 2rem .5rem;
+        padding: 1px;
+    }
+
+    .personagens-text h1 {
+        font-size: 1.4rem;
+    }
+    .personagens-text h2 {
+        font-size: 1.2rem;
+    }
+    .personagens-text li {
+        font-size: .8rem;
+    }
+    .personagens-text p {
+        font-size: .8rem;
+    }
+
+    .form-content {
+        margin-top: 1rem;
+        gap: 1rem;
+    }
+
+    .form {
+        font-size: .5rem;
+    }
+}
