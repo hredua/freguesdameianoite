@@ -193,6 +193,17 @@ body {
     }
 }
 
+.badges {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.badges img {
+    border-radius: 10px;
+    cursor: pointer;
+}
+
 .video {
     max-width: 560px;
     min-width: 360px;
@@ -506,6 +517,14 @@ body {
 
     .text-block:after {
         animation: none;
+    }
+
+    .badges {
+        justify-content: center;
+    }
+
+    .badges img {
+        height: 1.5rem;
     }
 
     iframe {
